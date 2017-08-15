@@ -16,14 +16,16 @@ public class ScrollingActivity extends AppCompatActivity {
 
     private AppBarLayout mAppBarLayout=null;
     private CollapsingToolbarLayout collapsingToolbarLayout;
+
     private View mToolbar1=null;
     private View mToolbar2=null;
 
+    //toolbar1 布局
     private ImageView mZhangdan=null;
     private TextView mZhangdan_txt=null;
     private ImageView mTongxunlu=null;
     private ImageView mJiahao=null;
-
+    //toolbar2 布局
     private ImageView mZhangdan2=null;
     private ImageView mShaoyishao=null;
     private ImageView mSearch=null;
@@ -37,6 +39,7 @@ public class ScrollingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_scrolling);
         myRecyclerView=(RecyclerView)findViewById(R.id.myRecyclerView);
         myRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         collapsingToolbarLayout=(CollapsingToolbarLayout)findViewById(R.id.toolbar_layout);
         collapsingToolbarLayout.setStatusBarScrimColor(getResources().getColor(R.color.color1984D1));
 
@@ -59,6 +62,9 @@ public class ScrollingActivity extends AppCompatActivity {
         mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+                int range=appBarLayout.getTotalScrollRange();
+                Log.v("xhw"," onOffsetChanged  verticalOffset "+verticalOffset+" range "+range);
+
                 if (verticalOffset == 0){
                     //张开
                     mToolbar1.setVisibility(View.VISIBLE);

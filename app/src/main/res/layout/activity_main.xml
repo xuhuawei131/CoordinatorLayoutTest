@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.example.jack.coordinatorlayouttest.MainActivity">
+
+
+    <Button
+        android:id="@+id/btn_scorll1"
+        android:text="Scroll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_scorll2"
+        android:text="Scroll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_scorll3"
+        android:text="Scroll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_scorll4"
+        android:text="Scroll4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
